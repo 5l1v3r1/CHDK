@@ -715,7 +715,29 @@
 #define LANG_HELP_INF_FOCUS                     581
 #define LANG_HELP_CHG_FOCUS_FACTOR              582
 
-#define GUI_LANG_ITEMS                          582
+// Eyefi configuration
+#define LANG_MENU_MISC_EYEFI                583
+#define LANG_MENU_EYEFI_TITLE               584
+#define LANG_MENU_EYEFI_DELETE_ON_UPLOAD    585
+#define LANG_MENU_EYEFI_WIFI_DISABLE        586
+#define LANG_MENU_EYEFI_CARD_INFO           587
+#define LANG_MSG_EYEFI_INFO_TITLE           588
+#define LANG_MENU_EYEFI_TRANSFER_MODE       589
+#define LANG_MSG_EYEFI_NET_TITLE            590
+#define LANG_MENU_EYEFI_NET_LIST            591
+#define LANG_MSG_EYEFI_SCAN_TITLE           592
+#define LANG_MENU_EYEFI_NET_SCAN            593
+#define LANG_OSD_LAYOUT_EDITOR_EYEFI        594
+#define LANG_MENU_EYEFI_REBOOT              595
+#define LANG_MENU_EYEFI_DIRECT_MODE         596
+#define LANG_MENU_EYEFI_DIRECT_BEFORE       597
+#define LANG_MENU_EYEFI_DIRECT_AFTER        598
+#define LANG_MENU_EYEFI_DIRECT_START        599
+#define LANG_TBOX_EYEFI_NETWORK_TITLE       600
+#define LANG_TBOX_EYEFI_ENTER_SSID          601
+#define LANG_TBOX_EYEFI_ENTER_PASSWORD      602
+
+#define GUI_LANG_ITEMS                          602
 
 //-------------------------------------------------------------------
 extern void gui_lang_init();

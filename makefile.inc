@@ -217,6 +217,10 @@ ifdef OPT_WARNINGS
      endif
 endif
 
+ifdef OPT_EYEFI
+CFLAGS+=-DOPT_EYEFI
+endif
+
 ##########################################################################
 
 .PHONY: default

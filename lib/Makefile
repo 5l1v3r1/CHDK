@@ -11,4 +11,8 @@ ifdef OPT_UBASIC
 SUBDIRS+=ubasic
 endif
 
+ifdef OPT_EYEFI
+SUBDIRS+=eyefi
+endif
+
 include $(topdir)bottom.inc

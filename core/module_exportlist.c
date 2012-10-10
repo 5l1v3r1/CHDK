@@ -20,6 +20,7 @@
 #include "gui_mbox.h"
 #include "gui_mpopup.h"
 #include "gui_usb.h"
+#include "gui_eyefi.h"
 #include "conf.h"
 #include "raw.h"
 #include "font.h"
@@ -201,6 +202,7 @@ char COLOR__EXPORTEDSYM_HISTO_RG_PLAY = COLOR_HISTO_RG_PLAY ;
             gui_osd_draw_histo,
             gui_usb_draw_osd,
             gui_osd_draw_ev_video,
+            gui_osd_draw_eyefi,
 
             vid_get_bitmap_fb,
             vid_get_viewport_fb,

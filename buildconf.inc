@@ -5,6 +5,8 @@ OPT_TEXTREADER=1
 OPT_CALENDAR=1
 OPT_DEBUGGING=1
 OPT_EDGEOVERLAY=1
+# experimental Eyefi card configuration support
+OPT_EYEFI=1
 
 # Scripting components
 OPT_UBASIC=1

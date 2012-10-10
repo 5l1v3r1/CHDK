@@ -28,6 +28,10 @@
 #ifdef CAM_HAS_GPS
 #include "gps.h"
 #endif
+#ifdef OPT_EYEFI
+    #include "gui_eyefi.h"
+#endif
+
 #include "usb_remote.h"
 #include "module_load.h"
 
@@ -880,6 +884,9 @@ static CMenuItem misc_submenu_items[] = {
 #endif
 #if defined (OPT_GAMES)
     MENU_ITEM   (0x38,LANG_MENU_MISC_GAMES,                 MENUITEM_SUBMENU,               &games_submenu,                     0 ),
+#endif
+#ifdef OPT_EYEFI
+    MENU_ITEM(0x33,LANG_MENU_MISC_EYEFI,              MENUITEM_SUBMENU_PROC, gui_eyefi_open_submenu, 0 ),
 #endif
 #if CAM_SWIVEL_SCREEN
     MENU_ITEM   (0x28,LANG_MENU_MISC_FLASHLIGHT,            MENUITEM_BOOL,                  &conf.flashlight, 0 ),

@@ -385,6 +385,10 @@ typedef struct {
     // @title string from file                     
     char user_menu_script_title[USER_MENU_ITEMS][CONF_STR_LEN];
 
+    // EyeFi settings
+    int eyefi_delete_on_upload;
+    OSD_pos eyefi_pos;
+
 } Conf;
 
 extern Conf conf;

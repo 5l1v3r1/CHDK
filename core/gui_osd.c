@@ -14,6 +14,11 @@
 #ifdef CAM_HAS_GPS
 #include "gps.h"
 #endif
+#ifdef OPT_EYEFI
+//#include "eyefi.h"
+#include "gui_eyefi.h"
+#endif
+
 #include "modules.h"
 #include "module_load.h"
 

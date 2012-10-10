@@ -44,6 +44,7 @@ static void conf_change_menu_symbol_rbf_file();
 static void conf_change_alt_mode_button();
 static void conf_change_video_bitrate();
 static void conf_change_dng_ext();
+//static void conf_update_eyefi();
 static void conf_change_autoiso();
 
 void camera_set_raw(int mode)
@@ -494,6 +495,9 @@ static const ConfInfo conf_info[] = {
     CONF_INFO(321, conf.user_menu_script_title[12], CONF_CHAR_PTR,      ptr:"", NULL),
     CONF_INFO(322, conf.user_menu_script_title[13], CONF_CHAR_PTR,      ptr:"", NULL),
 
+    // EyeFi card settings
+    CONF_INFO(323, conf.eyefi_delete_on_upload, CONF_DEF_VALUE, i:0, NULL),
+
     };
 #define CONF_NUM (sizeof(conf_info)/sizeof(conf_info[0]))
 
@@ -518,6 +522,7 @@ void conf_info_func(unsigned short id)
 	case 159:
 	case 283:
     case 284: conf_change_autoiso(); break;
+//    case 323: conf_update_eyefi(); break;
     }
 }
 

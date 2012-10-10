@@ -10,6 +10,9 @@
 #include "gui_usb.h"
 #include "gui_space.h"
 #include "gui_osd.h"
+#ifdef OPT_EYEFI
+#include "gui_eyefi.h"
+#endif
 
 #include "module_load.h"
 #include "module_exportlist.h"
@@ -41,6 +44,9 @@ static OSD_elem osd[]={
     {LANG_OSD_LAYOUT_EDITOR_EV_VIDEO,   &conf.ev_video_pos,     {70, 24}},
 #endif
     {LANG_OSD_LAYOUT_EDITOR_USB_INFO,   &conf.usb_info_pos,     {31, 14}},  
+#ifdef OPT_EYEFI
+    {LANG_OSD_LAYOUT_EDITOR_EYEFI,      &conf.eyefi_pos,        {5*FONT_WIDTH, FONT_HEIGHT}},
+#endif
     {0}
 };
 
@@ -68,6 +74,7 @@ void gui_osd_draw(int enforce_redraw)
         gui_osd_draw_temp();
         gui_osd_draw_ev_video(1);
         gui_usb_draw_osd();
+        gui_osd_draw_eyefi();
         for (i=1; i<=2; ++i)
         {
             draw_rect((osd[curr_item].pos->x>=i)?osd[curr_item].pos->x-i:0, (osd[curr_item].pos->y>=i)?osd[curr_item].pos->y-i:0, 
