@@ -12,12 +12,25 @@
  * See README and COPYING for more details.
  */
 
-#include "eyefi-config.h"
+#include "eyefi.h"
 
-#include <string.h>
 #ifndef __CHDK__
 #include <unistd.h>
 #endif
+
+#include <string.h>
+#include <stddef.h>
+#include <stdlib.h>
+
+#define os_memset memset
+#define os_memcpy memcpy
+
+typedef unsigned char u8;
+typedef unsigned long long u32;
+
+#define MD5_MAC_LEN 16
+
+void md5_vector(size_t num_elem, const u8 *addr[], const size_t *len, u8 *mac);
 
 /**
  * hmac_md5_vector - HMAC-MD5 over data vector (RFC 2104)

@@ -12,14 +12,31 @@
  * See README and COPYING for more details.
  */
 
-#include "eyefi-config.h"
+#include "eyefi.h"
 
-#include <string.h>
 #ifndef __CHDK__
 #include <unistd.h>
 #endif
 
+#include <string.h>
+#include <stddef.h>
+#include <stdlib.h>
+
+#define os_memset memset
+#define os_memcpy memcpy
+#define os_strlen strlen
+#define host_to_be32(v)   ((v&0x000000FF)<<24)|((v&0x0000FF00)<<8)|((v&0x00FF0000)>>8)|((v&0xFF000000)>>24)   // Convert to big_endian
+
+typedef unsigned char u8;
+typedef unsigned long long u32;
+
 #define SHA1_MAC_LEN 20
+
+void hmac_md5_vector(const u8 *key, size_t key_len, size_t num_elem,
+		     const u8 *addr[], const size_t *len, u8 *mac);
+void hmac_md5(const u8 *key, size_t key_len, const u8 *data, size_t data_len,
+	      u8 *mac);
+
 void sha1_vector(size_t num_elem, const u8 *addr[], const size_t *len, u8 *mac);
 
 #define MD5_MAC_LEN 16
