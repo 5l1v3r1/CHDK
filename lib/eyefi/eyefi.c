@@ -648,7 +648,7 @@ int query_uploads(const char *path, struct file_upload_state files[], int numFil
 {
     int ret = 0;
     int i, j;
-    char *pathFix = path;
+    char *pathFix = (char *)path;
 
     // convert CHDK path to eyefi path
     if (path[0] == 'A' && path[1] == '/')

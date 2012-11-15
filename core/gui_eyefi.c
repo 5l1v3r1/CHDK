@@ -193,7 +193,7 @@ void gui_eyefi_open_submenu(int arg)
 
 static char textstring[33];
 
-static void tbox_cb(char* name)
+static void tbox_cb(const char* name)
 {
 }
 
